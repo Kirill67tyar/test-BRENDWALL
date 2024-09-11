@@ -1,9 +1,8 @@
-from rest_framework.viewsets import ModelViewSet
+from products.models import Product
 from rest_framework import mixins
 from rest_framework.viewsets import GenericViewSet
 
 from api.serializers import ProductModelSerializer
-from products.models import Product
 
 
 class ProductModelViewSet(mixins.CreateModelMixin,

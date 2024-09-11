@@ -1,9 +1,6 @@
-from django.db import models
 from django.core.validators import MinValueValidator
+from django.db import models
 
-"""
-Создайте модель продукта с полями: название (строка), описание (текст), цена (десятичное число).
-"""
 
 class Product(models.Model):
     name = models.CharField(
