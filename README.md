@@ -10,7 +10,7 @@
     ```
     git clone git@github.com:Kirill67tyar/test-BRENDWALL.git
     ```
-или
+    или
     ```
      git clone https://github.com/Kirill67tyar/test-BRENDWALL.git
     ```
