@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукт менеджер</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+</head>
+<body>
+    <h1>Продукт менеджер</h1>
+
+    <form method="post" id="product-form">
+        <label for="name">Название:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="description">Описание:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+        <label for="price">Цена:</label>
+        <input type="number" id="price" name="price" step="0.01" min="0.01" required><br><br>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <h2>Список продуктов</h2>
+    <table id="product-table">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>
