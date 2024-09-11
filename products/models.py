@@ -7,10 +7,10 @@ class Product(models.Model):
         max_length=255,
         blank=False,
         null=False,
-        verbose_name='Название рецепта',
+        verbose_name='Название продукта',
     )
     description = models.TextField(
-        verbose_name='Описание рецепта',
+        verbose_name='Описание продукта',
     )
     price = models.DecimalField(
         max_digits=10,
@@ -18,3 +18,8 @@ class Product(models.Model):
         verbose_name='Цена',
         validators=[MinValueValidator(0.01)],
     )
+
+    class Meta:
+        verbose_name = 'Продукт'
+        verbose_name_plural = 'Продукты'
+        ordering = ('id', 'name',)
